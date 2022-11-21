@@ -11,6 +11,8 @@
 		F99B49A9292B2FC30025EAF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B49A8292B2FC30025EAF0 /* ContentView.swift */; };
 		F99B49AB292B2FC60025EAF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F99B49AA292B2FC60025EAF0 /* Assets.xcassets */; };
 		F99B49AE292B2FC60025EAF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F99B49AD292B2FC60025EAF0 /* Preview Assets.xcassets */; };
+		F99B49B7292B34430025EAF0 /* CoffeeshopListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B49B6292B34430025EAF0 /* CoffeeshopListView.swift */; };
+		F99B49BB292B35670025EAF0 /* CoffeeshopsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B49BA292B35670025EAF0 /* CoffeeshopsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		F99B49A8292B2FC30025EAF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F99B49AA292B2FC60025EAF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F99B49AD292B2FC60025EAF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F99B49B6292B34430025EAF0 /* CoffeeshopListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeshopListView.swift; sourceTree = "<group>"; };
+		F99B49BA292B35670025EAF0 /* CoffeeshopsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeshopsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		F99B49B4292B30860025EAF0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F99B49BA292B35670025EAF0 /* CoffeeshopsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -79,6 +84,7 @@
 		F99B49B5292B308C0025EAF0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F99B49B6292B34430025EAF0 /* CoffeeshopListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,6 +161,8 @@
 			files = (
 				F99B49A9292B2FC30025EAF0 /* ContentView.swift in Sources */,
 				F99B49A7292B2FC30025EAF0 /* CoffeeshopApp.swift in Sources */,
+				F99B49B7292B34430025EAF0 /* CoffeeshopListView.swift in Sources */,
+				F99B49BB292B35670025EAF0 /* CoffeeshopsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
