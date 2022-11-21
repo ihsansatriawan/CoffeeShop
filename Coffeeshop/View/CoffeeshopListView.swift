@@ -10,8 +10,26 @@ import SwiftUI
 struct CoffeeshopListView: View {
     // MARK: - PROPERTIES
 
+    @State private var coffeeSearch: String = ""
+    
     private var coffeeSearchResults: [Coffeeshop] {
-        return CoffeeshopProvider.all()
+        let results = CoffeeshopProvider.all()
+        
+        if coffeeSearch.isEmpty {
+            return results
+        } else {
+            return results.filter {
+                $0.name.lowercased().contains(coffeeSearch.lowercased()) || $0.location.lowercased().contains(coffeeSearch.lowercased())
+            }
+        }
+    }
+    
+    private var suggestedCoffee: [Coffeeshop] {
+        if (coffeeSearch.isEmpty) {
+            return []
+        } else {
+            return coffeeSearchResults
+        }
     }
     
     
@@ -40,6 +58,16 @@ struct CoffeeshopListView: View {
 //                /*@START_MENU_TOKEN@*/Text(result.image)/*@END_MENU_TOKEN@*/
             } //: List CoffeeSearch
             .navigationTitle("Coffeeshop")
+            .searchable(
+                text: $coffeeSearch,
+                placement: .navigationBarDrawer(displayMode: .always),
+                prompt: "Search coffeeshops"
+            ) {
+                ForEach(suggestedCoffee) { coffee in
+                    Text("Looking for \(coffee.name)?")
+                        .searchCompletion(coffee.name)
+                }
+            }
         } //: NAVIGATION
     } //: View
 }
